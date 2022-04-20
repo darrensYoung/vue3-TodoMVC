@@ -1,0 +1,42 @@
+
+
+<template>
+	<section class="todoapp">
+			<header class="header">
+				<h1>todos</h1>
+				<input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?">
+			</header>
+			<section class="main" >
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul class="todo-list">
+					<li class="todo" >
+						<div class="view">
+							<input class="toggle" type="checkbox">
+							<label >11</label>
+							<button class="destroy"></button>
+						</div>
+						<input class="edit" type="text">
+					</li>
+				</ul>
+			</section>
+			<footer class="footer">
+				<span class="todo-count">
+					<strong></strong> 1left
+				</span>
+				<ul class="filters">
+					<li><a href="#/all" >All</a></li>
+					<li><a href="#/active" >Active</a></li>
+					<li><a href="#/completed">Completed</a></li>
+				</ul>
+				<button class="clear-completed" @click="removeCompleted" > remaining">
+					Clear completed
+				</button>
+			</footer>
+		</section>
+</template>
+<script setup>
+import './assets/index.css'
+import { ref } from 'vue'
+const ccc = ref(1);
+</script>
